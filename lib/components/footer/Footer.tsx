@@ -49,7 +49,7 @@ const Footer = () => {
       <div className={styles.contacts}>
         {documentToReactComponents(footerContact.json)}
                  <a
-                  href="https://www.facebook.com/groups/1744014935878518/"
+                  href="https://www.instagram.com/fantabulosa_work/"
                   target={"_blank"}
                   rel={"noreferrer"}
                   className={styles.copyrightLink}>

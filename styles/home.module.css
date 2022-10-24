@@ -1,9 +1,7 @@
 .container {
+  background: #1a344b;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
   position: relative;
   display: flex;
   align-items: center;
@@ -13,17 +11,16 @@
   position: relative;
 }
 .container .imageWrapper {
-  height: 100vw;
   width: 100vw;
   position: relative;
 }
 .container .imageHero {
   opacity: 85%;
-  width: 100vw;
+  width: 100%;
 }
 .container .textHero {
   position: absolute;
-  bottom: 50%;
+  bottom: 49%;
   margin-left: 30%;
   margin-right: auto;
   letter-spacing: 1px;
@@ -32,7 +29,7 @@
 .container .textHero p {
   margin-left: 8%;
   font-family: "AbrilFatface", sans-serif;
-  font-size: clamp(16px, 5vw, 25px);
+  font-size: clamp(16px, 2vw, 25px);
   color: wheat;
 }
 @media (min-width: 1336px) {
