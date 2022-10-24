@@ -12,6 +12,7 @@ type Props = {
   data: GlobalPageModel;
 };
 
+
 const Navbar = () => {
   const router = useRouter();
 

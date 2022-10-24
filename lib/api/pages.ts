@@ -35,6 +35,13 @@ export const getGlobalQuery = (): DocumentNode => {
             footerContact {
               json
             }
+            logoCats{
+              url
+              size
+              width
+              height
+              fileName              
+            }
           }
         }
       }

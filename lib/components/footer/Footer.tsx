@@ -5,6 +5,8 @@ import styles from '../footer/footer.module.scss';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { AiFillCopyrightCircle } from 'react-icons/ai';
+
 
 type Props = {
   data: GlobalPageModel;
@@ -20,17 +22,17 @@ const Footer = () => {
 
   if (loading || !data?.globalsCollection?.items[0]) return null;
 
-  const { logo, footerContact, footerText } =
+  const {  footerContact, footerText, logoCats } =
     data.globalsCollection.items[0];
   return (
     <div className={styles.footer}>
       <div className={styles.logosWrapper}>
-        <div className={styles.logoCatsContainer}>
+        <div className={styles.logoCatsWrapper}>
           <Image
             className={styles.logo}
-            src={logo.url}
-            width={227}
-            height={91}
+            src={logoCats.url}
+            width={200}
+            height={200}
             alt="logoCats"
             loading="eager"
             quality={70}
@@ -46,6 +48,13 @@ const Footer = () => {
       </div>
       <div className={styles.contacts}>
         {documentToReactComponents(footerContact.json)}
+                 <a
+                  href="https://www.facebook.com/groups/1744014935878518/"
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  className={styles.copyrightLink}>
+                       <span className={styles.copyrightLogo} ><AiFillCopyrightCircle size={17}  />Created by Ursula Vallejo Janne</span>
+                  </a>
       </div>
     </div>
   );
