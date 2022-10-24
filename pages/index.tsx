@@ -8,6 +8,7 @@ import { HomePageModel } from "../lib/models/homePageModel";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import TextAnimation from '../lib/components/TextAnimation.js';
 
 //import { MyHead } from "../lib/components/myHead";
 
@@ -20,13 +21,16 @@ const Home = ({ data }: Props) => {
      return(
 
          <div className={styles.textHero}>
-         <h1 className={styles.titleHero}>{header}</h1>
+         <h1 className={styles.titleHero}><TextAnimation/></h1>
+         {/* <h1 className={styles.titleHero}>{header}</h1> */}
+         <h2>{subTitle}</h2>
          {introText?.json && documentToReactComponents(introText.json)}
-         </div>)
+         </div>
+         )
      };
 
 
-  const { header, image, introText, seoMetadata } = data;
+  const { header,subTitle, image, introText, seoMetadata } = data;
 
 
  console.log('Data', data)

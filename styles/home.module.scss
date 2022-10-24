@@ -2,7 +2,7 @@
 
 
 .container {
-  background: #1a344b;
+  background: #000000;
   // background-color: transparent;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@
   .imageWrapper {
     width: 100vw;
     position: relative;
-    //background: #000000;
+    //background:#F8CF9272 #000000;
 
   }
   .imageHero {
@@ -29,21 +29,35 @@
     width: 100%;
   }
 
-
+.titleHero{
+  letter-spacing: 0.2rem;
+  word-spacing: 2rem;
+  text-shadow: 2px 2px #F8CF9272
+}
 
   .textHero{
+    display: flex;
     position: absolute;
+    flex-direction: column;
     bottom: 49%;
+    align-items: center;
+    justify-content: center;
     margin-left: 30%;
     margin-right: auto;
     letter-spacing: 1px;
     z-index: 1;
-    p{
-      margin-left: 8%;
+    h2{
+      letter-spacing: 0.2rem;
       font-family: "AbrilFatface", sans-serif;
       font-size: clamp(16px, 2vw, 25px);
       color: wheat;
-
+      text-shadow: 2px 2px #000000
+    }
+    p{
+      font-size: clamp(16px, 2vw, 18px);
+      padding-top: 1.5rem;
+      color: wheat;
+      text-shadow: 2px 2px #000000
     }
 
     @include respond-to("l"){
