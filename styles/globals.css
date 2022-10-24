@@ -1,7 +1,4 @@
-@import "./breakpoints.scss";
-
 /*General Layout Font and color*/
-
 /*
 
  */
@@ -17,22 +14,18 @@
   font-family: "Corinthia-Bold";
   src: url("./assets/fonts/Corinthia-Bold.ttf");
 }
-
 @font-face {
   font-family: "Corinthia-Regular";
   src: url("./assets/fonts/Corinthia-Regular.ttf");
 }
-
 @font-face {
   font-family: "ConcertOne";
   src: url("./assets/fonts/ConcertOne-Regular.ttf");
 }
-
 @font-face {
   font-family: "AbrilFatface";
   src: url("./assets/fonts/AbrilFatface-Regular.ttf");
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -53,7 +46,6 @@ body {
   max-width: 100%;
 }
 
-//Hero Title
 h1 {
   font-family: "Corinthia-Bold", sans-serif;
   font-size: clamp(30px, 5vw, 85px);
@@ -61,7 +53,6 @@ h1 {
   color: var(--background);
 }
 
-//Titles sections
 h2 {
   font-family: "AbrilFatface", sans-serif;
   font-size: clamp(30px, 5vw, 50px);
@@ -73,19 +64,16 @@ p {
   color: var(--primary-text);
 }
 
-// Subtitles Sections Title
-   h3 {
-     font-size: clamp(30px, 5vw, 40px);
-     color: var(--secondary-text);
-   }
-
-
+h3 {
+  font-size: clamp(30px, 5vw, 40px);
+  color: var(--secondary-text);
+}
 
 .buttonStyle {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   background-color: var(--background-color);
-  color:var(--background) ;
+  color: var(--background);
   padding: 5px 15px;
   border-radius: 20px;
   border: none;
@@ -97,3 +85,5 @@ p {
   color: var(--hover-color);
   transition: all 0.2s ease-in;
 }
+
+/*# sourceMappingURL=globals.css.map */

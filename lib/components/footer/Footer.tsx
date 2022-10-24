@@ -4,7 +4,6 @@ import { GlobalPageModel } from '../../models/globalPageModel';
 import styles from '../footer/footer.module.scss';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 type Props = {
@@ -21,32 +20,24 @@ const Footer = () => {
 
   if (loading || !data?.globalsCollection?.items[0]) return null;
 
-  const { getItLogo, getHubLogo, footerContact, footerText } =
+  const { logo, footerContact, footerText } =
     data.globalsCollection.items[0];
   return (
     <div className={styles.footer}>
       <div className={styles.logosWrapper}>
-        <div className={styles.gethublogoWrapper}>
+        <div className={styles.logoCatsContainer}>
           <Image
-            className={styles.gethubimg}
-            src={getHubLogo.url}
+            className={styles.logo}
+            src={logo.url}
             width={227}
             height={91}
-            alt="getHubLogo"
+            alt="logoCats"
             loading="eager"
             quality={70}
           />
         </div>
-        <div className={styles.getitlogoWrapper}>
-          <Image
-            className={styles.getitimg}
-            src={getItLogo.url}
-            width={1900}
-            height={1200}
-            alt="getItLogo"
-            loading="eager"
-            quality={70}
-          />
+        <div className={styles.logoSocial}>
+
         </div>
       </div>
 

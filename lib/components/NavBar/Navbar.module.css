@@ -1,7 +1,4 @@
-@import "../../../styles/breakpoints";
-
 .containerNav {
-
   box-sizing: border-box;
   margin: 0;
   display: flex;
@@ -11,8 +8,8 @@
   padding-right: 2.6rem;
   padding-top: 0;
   overflow-x: hidden;
-  background-color:rgba(0, 0, 0, 0.5);
-  border-bottom: 1px  solid var(--background-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--background-color);
   position: fixed;
   height: 10vh;
   z-index: 105;
@@ -33,7 +30,6 @@
   align-items: center;
   transition: 1s ease-in-out;
   z-index: 100;
-
 }
 
 .imgWrapper {
@@ -41,25 +37,23 @@
   width: 8rem;
   height: auto;
   cursor: pointer;
-  margin-left:5% ;
+  margin-left: 5%;
   color: white;
   display: flex;
-
 }
-.navTitle{
+
+.navTitle {
   margin-left: 1.5rem;
 }
 
-
-
 .instagramLogo,
-.facebookLogo
-{color: white;
+.facebookLogo {
+  color: white;
   margin-left: 2rem;
 }
 
 .instagramLogo:hover,
-.facebookLogo:hover{
+.facebookLogo:hover {
   color: var(--background-color);
   transition: all 0.4s ease-in;
 }
@@ -77,7 +71,6 @@
   background: transparent;
 }
 
-
 .linkItem {
   font-family: "AbrilFatface", sans-serif;
   color: var(--background);
@@ -87,12 +80,14 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
-  a{
-    all: unset;
-  }
+}
+.linkItem a {
+  all: unset;
 }
 
-.linkItem  a:hover {
+.linkItem a:hover {
   color: var(--background-color);
   transition: all 0.4s ease-in;
 }
+
+/*# sourceMappingURL=Navbar.module.css.map */

@@ -6,13 +6,14 @@ import Layout from "../lib/components/Layout";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-      <ApolloProvider client={client}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
 
-      </ApolloProvider>
+  return (
+    <ApolloProvider client={client}>
+      <Layout>
+      <Component {...pageProps} />
+      </Layout>
+
+    </ApolloProvider>
   );
 }
 
