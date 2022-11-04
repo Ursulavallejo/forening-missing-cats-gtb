@@ -1,5 +1,5 @@
 import { gql, DocumentNode } from '@apollo/client';
-
+// import { SEO_FRAGMENT } from "./fragments";
 
 export const getHomePageQuery = (): DocumentNode => {
   return gql`
@@ -7,11 +7,24 @@ export const getHomePageQuery = (): DocumentNode => {
       homePageCollection(limit: 1, locale: $locale){
         items{
           header
-          subTitle
           introText{json}
           image{url}
+          seoMetadata{
+            title
+            description
+            ogTitle
+            ogDescription
+            ogImage{url}
+            hidePageFromSearchEngines
+            excludeLinksFromSearchRankings
+          }
+          sectionsCollection{
+            items{
+              __typename
+              sys{id}
+            }
+          }
         }
-        
       }
     }
   `;
@@ -49,40 +62,26 @@ export const getGlobalQuery = (): DocumentNode => {
   `;
 };
 
-
-/*export const getHomePageQuery = (): DocumentNode => {
+export const getLandingPageQuery = (slug: string): DocumentNode => {
   return gql`
-    query ($locale: String!) {
-      homePageCollection(limit: 1, locale: $locale) {
-        items {
+    query ($locale: String!)  {
+      landingPageCollection(limit:1, locale: $locale, where: { slug: "${slug}" }){
+        items{
+          slug
           header
-          introText {
-            json
-          }
-          image {
-            url
-          }
-          seoMetadata {
-            title
-            description
-            ogTitle
-            ogDescription
-            ogImage {
-              url
-            }
-            hidePageFromSearchEngines
-            excludeLinksFromSearchRankings
-          }
-          sectionsCollection {
-            items {
+          introText
+          heroImage{url}
+          sectionsCollection{
+            items{
               __typename
-              sys {
-                id
-              }
+              sys{id}
             }
           }
         }
       }
     }
   `;
-};*/
+};
+
+
+

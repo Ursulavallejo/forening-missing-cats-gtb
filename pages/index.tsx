@@ -1,16 +1,17 @@
 import type { GetServerSideProps } from "next";
-//import Head from "next/head";
+import Head from "next/head";
 import styles from "../styles/home.module.scss"
 import { client } from "../lib/api/apolloClient";
 import { getHomePageQuery } from "../lib/api/pages";
 import { HomePageModel } from "../lib/models/homePageModel";
-//import { getSection } from "../lib/utils/sectionPicker";
+import { getSection } from "../lib/utils/sectionPicker";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import TextAnimation from '../lib/components/TextAnimation.js';
+import { MyHead } from "../lib/components/myHead";
+/* import { HowToHelpSection } from "../lib/components/Sections/HowToHelpSection/HowToHelpSection"; */
 
-//import { MyHead } from "../lib/components/myHead";
 
 type Props = {
   data: HomePageModel;
@@ -33,9 +34,19 @@ const Home = ({ data }: Props) => {
   const { header,subTitle, image, introText, seoMetadata } = data;
 
 
- console.log('Data', data)
+ console.log('HomeData', data)
   return (
-    <section className={styles.container}>
+      <>
+        <MyHead
+          title={seoMetadata.title}
+          description={seoMetadata.description}
+          ogTitle={seoMetadata.ogTitle ?? seoMetadata.title}
+          ogDescription={seoMetadata.ogDescription ?? seoMetadata.description}
+          ogImage={seoMetadata.ogImage}
+          hidePage={seoMetadata.hidePage}
+          excludeLinks={seoMetadata.excludeLinks}
+        />
+    <div className={styles.container}>
 
     <div className={styles.wrapper}>
 
@@ -46,7 +57,7 @@ const Home = ({ data }: Props) => {
 
     </div> */}
              <div className={styles.imageWrapper} >
-                     <ParallaxBanner
+                      <ParallaxBanner
                        className={styles.imageHero}
                          layers={[
                            { image: image?.url ?? "", speed: -2 },
@@ -68,7 +79,14 @@ const Home = ({ data }: Props) => {
              </div>
              </div>
 
-    </section>
+    </div>
+       {/* RENDER SECTIONS */}
+       {data.sectionsCollection.items.map((section: any) =>
+        getSection(section.__typename, section.sys?.id)
+        )}
+
+
+    </>
   );
 };
 

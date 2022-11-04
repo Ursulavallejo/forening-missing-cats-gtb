@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ApolloProvider client={client}>
-
       <Layout>
-      <ParallaxProvider>
+       <ParallaxProvider>
       <Component {...pageProps} />
+
        </ParallaxProvider>
       </Layout>
 

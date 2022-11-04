@@ -34,8 +34,8 @@ const Navbar = () => {
           <Image
             src={logo.url}
             alt="logoMissingCats"
-            width="329"
-            height="442"
+            width="500"
+            height="500"
             className={styles.img}
             loading="eager"
             quality={70}
@@ -52,7 +52,7 @@ const Navbar = () => {
   {router.locale == 'sv' ? 'om förening' : 'about us'}</Link>
   </div>
   <div className={styles.linkItem}>
-    <Link href="/help" >
+    <Link href="/wehelp" >
     {router.locale == 'sv' ? 'vi hjälper' : 'we help'}</Link>
     </div>
     <div className={styles.linkItem}>

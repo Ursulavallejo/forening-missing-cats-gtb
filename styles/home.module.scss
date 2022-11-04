@@ -21,7 +21,6 @@
   .imageWrapper {
     width: 100vw;
     position: relative;
-    //background:#F8CF9272 #000000;
 
   }
   .imageHero {
@@ -51,13 +50,13 @@
       font-family: "AbrilFatface", sans-serif;
       font-size: clamp(16px, 2vw, 25px);
       color: wheat;
-      text-shadow: 2px 2px #000000
+      text-shadow: 1px 1px #000000
     }
     p{
       font-size: clamp(16px, 2vw, 18px);
       padding-top: 1.5rem;
       color: wheat;
-      text-shadow: 2px 2px #000000
+      text-shadow: 1px 1px #000000
     }
 
     @include respond-to("l"){

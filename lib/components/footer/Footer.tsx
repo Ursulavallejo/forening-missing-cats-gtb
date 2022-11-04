@@ -31,8 +31,8 @@ const Footer = () => {
           <Image
             className={styles.logo}
             src={logoCats.url}
-            width={200}
-            height={200}
+            width={500}
+            height={670}
             alt="logoCats"
             loading="eager"
             quality={70}
