@@ -7,7 +7,9 @@
   --background-color: #f4eae1;
   --primary-text: #000000 ;
   --secondary-text: #575656FF ;
-  --hover-color: #1a344b;
+  --hover-color: #f3930a;
+  --primary-color: #f46b45;
+  --secondary-color:#eea849;
 }
 
 @font-face {

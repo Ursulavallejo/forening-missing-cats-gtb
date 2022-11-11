@@ -7,6 +7,7 @@ export const getHomePageQuery = (): DocumentNode => {
       homePageCollection(limit: 1, locale: $locale){
         items{
           header
+          subTitle
           introText{json}
           image{url}
           seoMetadata{
