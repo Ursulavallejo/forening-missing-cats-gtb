@@ -1,3 +1,4 @@
+/*
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import styles from "../styles/home.module.scss"
@@ -5,12 +6,12 @@ import { client } from "../lib/api/apolloClient";
 import { getHomePageQuery } from "../lib/api/pages";
 import { HomePageModel } from "../lib/models/homePageModel";
 import { getSection } from "../lib/utils/sectionPicker";
-import { ParallaxBanner } from "react-scroll-parallax";
+import { Parallax } from "react-parallax";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import TextAnimation from '../lib/components/TextAnimation.js';
 import { MyHead } from "../lib/components/myHead";
-/* import { HowToHelpSection } from "../lib/components/Sections/HowToHelpSection/HowToHelpSection"; */
+
 
 
 type Props = {
@@ -18,20 +19,17 @@ type Props = {
 };
 
 const Home = ({ data }: Props) => {
-  const renderBox = (mobile: boolean) => {
-     return(
-
-         <div className={styles.textHero}>
-         <h1 className={styles.titleHero}><TextAnimation/></h1>
-         {/* <h1 className={styles.titleHero}>{header}</h1> */}
-         <h2>{subTitle}</h2>
-         {introText?.json && documentToReactComponents(introText.json)}
-         </div>
-         )
-     };
-
 
   const { header,subTitle, image, introText, seoMetadata } = data;
+
+  const insideStyles = {
+    background: "black",
+    padding: 20,
+    position: "absolute",
+    top: "70%",
+    left: "50%",
+    transform: "translate(-50%,-50%)"
+  };
 
 
  console.log('HomeData', data)
@@ -46,38 +44,43 @@ const Home = ({ data }: Props) => {
           hidePage={seoMetadata.hidePage}
           excludeLinks={seoMetadata.excludeLinks}
         />
+
+        <div>
+
+        <Parallax bgImage={image.url} strength={500}>>
+       <div style={{ height: 900 }}>
+
+         <div style={insideStyles}>
+
+         <h1 className={styles.titleHero}><TextAnimation/></h1>
+         <h2>{subTitle}</h2>
+         {introText?.json && documentToReactComponents(introText.json)}
+
+         </div>
+       </div>
+
+        </Parallax>
+        </div>
+
     <div className={styles.container}>
+
 
     <div className={styles.wrapper}>
 
-{/*     <div className={styles.textHero}>
+
+{ */
+/*     <div className={styles.textHero}>
     <h1 className={styles.titleHero}>{header}</h1>
     {introText?.json && documentToReactComponents(introText.json)}
 
 
-    </div> */}
+    </div> *//*
+}
              <div className={styles.imageWrapper} >
-                      <ParallaxBanner
-                       className={styles.imageHeroMobile}
-                         layers={[
-                           { image: image?.url ?? "", speed: -4 },
-                           { children: renderBox(false), speed: -25  },
-                         ]}
-                         style={{ height: "35vh" }}
 
-                       ></ParallaxBanner>
-                      <ParallaxBanner
-                      speed={50}
-                       className={styles.imageHeroDesktop}
-                         layers={[
-                           { image: image?.url ?? "", speed: -2 },
-                           { children: renderBox(false), speed: 30  },
-                         ]}
-                         style={{ height: "100vh" }}
 
-                       ></ParallaxBanner>
-
-{/*                <Image className={styles.imageHero}
+{ */
+/*                <Image className={styles.imageHero}
                  src={image.url}
                  alt="HeroPhoto"
                  width="2700"
@@ -86,12 +89,16 @@ const Home = ({ data }: Props) => {
                  loading="eager"
                  quality={100}
                  priority
-               /> */}
+               /> *//*
+}
              </div>
              </div>
 
     </div>
-       {/* RENDER SECTIONS */}
+
+       { */
+/* RENDER SECTIONS *//*
+}
        {data.sectionsCollection.items.map((section: any) =>
         getSection(section.__typename, section.sys?.id)
         )}
@@ -119,3 +126,4 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 };
 
 export default Home;
+ */
