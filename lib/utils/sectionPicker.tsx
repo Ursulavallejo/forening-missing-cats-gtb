@@ -8,7 +8,7 @@ import { ContactSection } from "../components/Sections/ContactSection/ContactSec
 
 
 const sectionsMap = new Map<string, Function>([
- // ["GoalSection", (id: string) => <GoalSection key={id} id={id} />],
+  ["GoalSection", (id: string) => <GoalSection key={id} id={id} />],
  // ["LostCatSection", (id: string) => <LostCatSection key={id} id={id} />],
  // ["HomelessSection", (id: string) => <HomelessSection key={id} id={id} />],
  // ["HowToHelpSection", (id: string) => <HowToHelpSection key={id} id={id} />],
