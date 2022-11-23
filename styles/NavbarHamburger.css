@@ -129,6 +129,10 @@
 }
 
 @media (max-width: 700px) {
+    .active{
+        color: var(--primary-color);
+    }
+
     .menu-button-container {
         display: flex;
     }
@@ -161,7 +165,6 @@
         margin: 0;
         padding: 0.5em 0;
         width: 100%;
-        color: white;
         background-color:rgba(0, 0, 0, 0.8);
 
 
