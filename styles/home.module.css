@@ -10,23 +10,26 @@
 }
 .container .wrapper {
   position: relative;
-  padding-top: 75px;
 }
 .container .imageWrapper {
+  padding-top: 75px;
   width: 100vw;
   position: relative;
 }
 .container .imageHeroDesktop {
   visibility: hidden;
+  display: none;
 }
 @media (min-width: 767px) {
   .container .imageHeroDesktop {
     visibility: visible;
     width: 100%;
     opacity: 95%;
+    display: flex;
   }
 }
 .container .containerHeroMobile {
+  margin: 0;
   visibility: visible;
   opacity: 95%;
 }

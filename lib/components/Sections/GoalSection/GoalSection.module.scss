@@ -1,0 +1,147 @@
+@import "../../../../styles/breakpoints.scss";
+
+.container {
+  box-sizing: border-box;
+  margin: 0.5rem ;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+
+  @include respond-to("m") {
+    display: flex;
+    margin: 1.5rem 2rem;
+  }
+  @include respond-to("l") {
+    margin: 4rem 2rem;
+
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: auto;
+    @include respond-to("m") {
+     // margin: 10px auto;
+      flex-direction: row;
+    }
+    @include respond-to("l") {
+      margin: 1em auto;
+      flex-direction: row;
+    }
+    @include respond-to("xl") {
+      max-width: 1900px;
+    }
+
+  }
+}
+
+/*
+.img {
+  position: absolute;
+  //top: -5%;
+  @include respond-to("s") {
+    position: relative;
+    top: -35%;
+  }
+}
+*/
+
+
+.left {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+
+  @include respond-to("s") {
+    display: flex;
+    margin-top: -25%;
+  }
+  @include respond-to("m") {
+    width: 60%;
+    margin-top: -15%;
+  }
+  @include respond-to("l") {
+    width: 50%;
+  }
+
+}
+
+.right {
+  justify-content: center;
+  margin-left: 1em;
+  margin-top: -3rem;
+  width: 90%;
+  position: relative;
+  z-index: 1;
+  h3, h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    padding: 0 0.5em;
+  }
+
+  @include respond-to("s"){
+    padding: 0 ;
+    p{
+      padding: 0 0.5em;
+    }
+
+  }
+  @include respond-to("m") {
+    margin-top: 1rem;
+    width: 55%;
+    margin-left: 2em;
+    h2, h3 {
+      text-align: left;
+      padding-bottom: 1em;
+    }
+    p {
+      text-align: left;
+      padding-bottom: 1em;
+    }
+  }
+  li {
+    color: var(--primary-color);
+  }
+
+  @include respond-to("xl"){
+    width: 50%;
+    margin-right: 2em;
+    p {
+      margin-right: 2em;
+    }
+  }
+
+}
+.dot {
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text);
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+
+.ulWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 1rem;
+  padding: 0 0.7em;
+  @include respond-to("s"){
+    padding: 0 1em;
+
+  }
+}

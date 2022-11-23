@@ -28,7 +28,7 @@ console.log('SectionGOAL', data)
     return (
       <div className={styles.ulWrapper} key={index}>
         <div className={styles.dot}>
-          <MdOutlineKeyboardArrowRight />{" "}
+          <MdOutlineKeyboardArrowRight size='20px' />{" "}
         </div>
         <div>{item?.content[0]?.content[0]?.value}</div>
       </div>
