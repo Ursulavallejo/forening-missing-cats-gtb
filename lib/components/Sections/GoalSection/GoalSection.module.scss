@@ -7,14 +7,12 @@
   justify-content: center;
   align-items: center;
 
-
   @include respond-to("m") {
     display: flex;
     margin: 1.5rem 2rem;
   }
   @include respond-to("l") {
     margin: 4rem 2rem;
-
   }
 
   .wrapper {
@@ -33,21 +31,8 @@
     @include respond-to("xl") {
       max-width: 1900px;
     }
-
   }
 }
-
-/*
-.img {
-  position: absolute;
-  //top: -5%;
-  @include respond-to("s") {
-    position: relative;
-    top: -35%;
-  }
-}
-*/
-
 
 .left {
   width: 100%;
@@ -58,7 +43,7 @@
 
   @include respond-to("s") {
     display: flex;
-    margin-top: -25%;
+    margin-top: 2rem;
   }
   @include respond-to("m") {
     width: 60%;
@@ -67,7 +52,6 @@
   @include respond-to("l") {
     width: 50%;
   }
-
 }
 
 .right {
@@ -128,9 +112,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--secondary-text);
-  width: 30px;
-  height: 30px;
+  color: var(--background);
+  width: 35px;
+  height: 35px;
   min-width: 30px;
 }
 
@@ -141,7 +125,6 @@
   margin-top: 1rem;
   padding: 0 0.7em;
   @include respond-to("s"){
-    padding: 0 1em;
-
+    padding: 0 2em;
   }
 }

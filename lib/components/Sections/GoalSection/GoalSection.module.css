@@ -39,16 +39,6 @@
   }
 }
 
-/*
-.img {
-  position: absolute;
-  //top: -5%;
-  @include respond-to("s") {
-    position: relative;
-    top: -35%;
-  }
-}
-*/
 .left {
   width: 100%;
   justify-content: center;
@@ -59,7 +49,7 @@
 @media (min-width: 767px) {
   .left {
     display: flex;
-    margin-top: -25%;
+    margin-top: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -134,9 +124,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--secondary-text);
-  width: 30px;
-  height: 30px;
+  color: var(--background);
+  width: 35px;
+  height: 35px;
   min-width: 30px;
 }
 
@@ -149,7 +139,7 @@
 }
 @media (min-width: 767px) {
   .ulWrapper {
-    padding: 0 1em;
+    padding: 0 2em;
   }
 }
 

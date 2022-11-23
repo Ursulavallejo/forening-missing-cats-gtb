@@ -21,7 +21,7 @@ export const LostCatSection = ({ id }: Props) => {
       return (
     <div className={styles.itemContainer}>
     <div key={index} className={styles.item}>
-               <div className={styles.image}>
+               <div className={styles.imageContainer}>
                  <Image
                    src={item.image.url}
                    width={300}
@@ -30,6 +30,8 @@ export const LostCatSection = ({ id }: Props) => {
                    objectFit="contain"
                    loading="eager"
                    quality={70}
+                   className={styles.image}
+
                  />
              </div>
              <h4>{item.title}</h4>

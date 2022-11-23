@@ -4,7 +4,7 @@ import { getGoalSectionQuery } from "../../../api/sections";
 import styles from "./GoalSection.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { FaCat } from "react-icons/fa";
 import { INLINES, BLOCKS } from "@contentful/rich-text-types";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ console.log('SectionGOAL', data)
     return (
       <div className={styles.ulWrapper} key={index}>
         <div className={styles.dot}>
-          <MdOutlineKeyboardArrowRight size='20px' />{" "}
+          <FaCat size='20px' />{" "}
         </div>
         <div>{item?.content[0]?.content[0]?.value}</div>
       </div>

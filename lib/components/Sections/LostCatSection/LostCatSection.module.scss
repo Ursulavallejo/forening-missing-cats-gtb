@@ -1,0 +1,224 @@
+@import "../../../../styles/breakpoints.scss";
+
+.container {
+  box-sizing: border-box;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3af97;
+  padding: 0 1.5rem;
+
+
+  @include respond-to("s"){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @include respond-to("m") {
+    align-items: flex-start;
+    padding: 80px 40px;
+  }
+
+  @include respond-to("xl") {
+    padding: 95px 40px;
+  }
+
+
+  .wrapper {
+    display: flex;
+    max-width: 1600px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding-bottom: 2rem;
+
+
+    @include respond-to("m") {
+      margin: 40px auto;
+      flex-direction: row;
+
+    }
+    @include respond-to("l") {
+      margin-left: 1rem;
+
+    }
+    @include respond-to("xl") {
+      max-width: 1900px;
+      margin:0 3.7rem 0 2.5rem ;
+    }
+
+  }
+
+}
+
+.header {
+  text-align: left;
+  margin: 0 1em;
+
+  h2 {
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 0;
+
+  }
+  p {
+    padding-bottom: 1.5em;
+    padding-right: 1rem;
+    text-align: left;
+
+  }
+  @include respond-to("s") {
+    margin: 0 1.5em;
+
+  }
+  @include respond-to("m") {
+    text-align: left;
+    width: 80%;
+    margin: 0 ;
+  }
+  @include respond-to("l") {
+    width: 75%;
+  }
+
+  @include respond-to("xl") {
+    width: 50%;
+  }
+}
+
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding-bottom: 1em;
+  width: Max(300px, 80%);
+  height: Max(300px, 80%);
+  margin-bottom: 1rem;
+
+
+  @include respond-to("s") {
+    gap: 12px;
+    height: Max(350px, 90%);
+    margin: 30px;
+    padding: 15px;
+  }
+
+  @include respond-to("m"){
+    width: Max(270px, 85%);
+    height: Max(270px, 85%);
+    gap: 5px;
+    margin-bottom: 2rem;
+
+  }
+  @include respond-to("l"){
+    width: Max(245px, 60%);
+    height: Max(260px, 85%);
+  }
+  @include respond-to("xl"){
+    width: Max(260px, 85%);
+    height: Max(260px, 85%);
+  }
+
+}
+
+//look again not working scroll
+.itemContainer:hover{
+  color: var(--secondary-text);
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+
+
+.item {
+  width: Max(250px, 80%);
+  height: Max(250px, 65%);
+
+  p {
+    padding-top: 1em;
+    font-size: 16px;
+  }
+  h4 {
+    color: var(--primary-text);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  @include respond-to("s"){
+    width: Max(250px, 80%);
+    height: Max(250px, 80%);
+  }
+
+  @include respond-to("l") {
+    width: Max(210px, 50%);
+  }
+
+  @include respond-to("xl") {
+    padding-bottom: 3em;
+    width: Max(250px, 50%);
+  }
+}
+
+/*.iconContainer {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
+}*/
+
+
+.gridContainer {
+  display: block;
+  max-width:300px;
+  width: 100vw;
+  margin-top: 40px;
+  margin-left: 5.5%;
+
+
+  @include respond-to("s") {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1em;
+    margin-bottom: 2rem;
+    height: 100%;
+    overflow: hidden;
+    visibility: visible;
+    max-width: 750px;
+    margin-left: 0;
+
+  }
+  @include respond-to("m") {
+    grid-auto-rows: 1fr 1fr 1fr;
+    margin-bottom: 2.5rem;
+    column-gap: 0.5em;
+    max-width: 850px;
+    margin-left: auto;
+
+
+  }
+  @include respond-to("l") {
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+  }
+  @include respond-to("xl") {
+    padding-left: 1.5em;
+    column-gap: 1.5em;
+    max-width: 1100px;
+  }
+
+}
+
+
+
+
+
+
