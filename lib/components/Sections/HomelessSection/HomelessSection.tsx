@@ -24,13 +24,13 @@ export const HomelessSection = ({ id }: Props) => {
 
         return (
     <div className={styles.container} id="info">
-      <div className={styles.wrapper}>
-        <div >
+
+        <div className={styles.imgContainer} >
           <Image
             className={styles.img}
             src={data.homelessSection.image.url}
-            width={2000}
-            height={1000}
+            width={2500}
+            height={1700}
             alt="catBedPhoto"
             loading="eager"
             quality={95}
@@ -41,14 +41,10 @@ export const HomelessSection = ({ id }: Props) => {
           {data.homelessSection?.richText?.json &&
             documentToReactComponents(
               data.homelessSection.richText.json
-
             )}
-
         </div>
-          <a target="_blank" href="https://www.japan-guide.com/e/e2172.html"><button
-          className={styles.donateBtn}>{data.homelessSection.buttonText}</button></a>
-
-      </div>
+         <button
+          className={styles.donateBtn}>{data.homelessSection.buttonText}</button>
     </div>
 
    );

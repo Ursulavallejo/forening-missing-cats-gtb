@@ -21,21 +21,24 @@ console.log('HowtoHelpSection', data)
       return (
     <div className={styles.itemContainer}>
     <div key={index} className={styles.item}>
-             <div className={styles.imageContainer}>
                <div className={styles.image}>
                  <Image
+                 className={styles.img}
                    src={item.image.url}
                    width={300}
                    height={300}
                    alt="imageBox"
-                   objectFit="contain"
+                   objectFit="cover"
                    loading="eager"
                    quality={70}
                  />
                </div>
-             </div>
-             <h4>{item.title}</h4>
-             <p>{item.description}</p>
+               <div className={styles.info}>
+                <h3>{item.title}</h3>
+               {/*  <p>{item.description}</p> */}
+                </div>
+
+
            </div>
     </div>
 
@@ -50,15 +53,18 @@ console.log('HowtoHelpSection', data)
     <section className={styles.container} id="lostCat">
       <div className={styles.wrapper}>
         <div className={styles.header}>
-          <h2>{data.howToHelpSection.title}</h2>
-          <h3>{data.howToHelpSection.subTitle}</h3>
-          <p>{data.howToHelpSection.description}</p>
+          <h2 className={styles.title}>{data.howToHelpSection.title}</h2>
+          <h3 className={styles.subTitle}>{data.howToHelpSection.subTitle}</h3>
+          <p className={styles.text}>{data.howToHelpSection.description}</p>
         </div>
 
          <div className={styles.gridContainer}>
+          <div className={styles.imageSlide}>
           {data.howToHelpSection.itemsCollection.items.map(
             (item: any, index: number) => renderHowtoHelpItem(item, index)
           )}
+          </div>
+
         </div>
       </div>
     </section>

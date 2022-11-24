@@ -43,18 +43,24 @@ const Footer = () => {
         </div>
       </div>
 
-      <div style={{ fontSize: '12px' }} className={styles.copyright}>
+      <div  className={styles.copyright}>
         {documentToReactComponents(footerText.json)}
       </div>
       <div className={styles.contacts}>
-        {documentToReactComponents(footerContact.json)}
-                 <a
-                  href="https://www.instagram.com/fantabulosa_work/"
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  className={styles.copyrightLink}>
-                       <span className={styles.copyrightLogo} ><AiFillCopyrightCircle size={17}  />Created by Ursula Vallejo Janne</span>
-                  </a>
+      <a href="mailto:missing.cats.gtb@gmail.com "
+      target="_blank"
+      rel="noreferrer noopener">
+      <span className={styles.emailLink}>
+      {documentToReactComponents(footerContact.json)}</span></a>
+
+       <a
+       href="https://www.instagram.com/fantabulosa_work/"
+       target={"_blank"}
+       rel={"noreferrer"}
+       className={styles.copyrightLink}>
+         <span className={styles.copyrightLogo} >
+         <AiFillCopyrightCircle size={30}  />Created by Ursula Vallejo Janne</span>
+         </a>
       </div>
     </div>
   );

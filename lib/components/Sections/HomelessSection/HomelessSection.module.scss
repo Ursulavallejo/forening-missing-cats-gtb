@@ -2,17 +2,49 @@
 
 .container{
   position: relative;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  max-height: 1500px;
 }
+
 .textContainer{
   position: absolute;
-  top: 35%;
-  left: 5%;
+  top: 10%;
+  left: 15%;
   margin-bottom: 10px;
-  width: 25%;
+  width: 75%;
   word-spacing: 0.2px;
-  h2,p {
+  h2,h3,p {
     color: white;
+
   }
+  h2, h3{
+    text-align: center;
+    padding-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  @include respond-to("s"){
+    top: 19%;
+    left: 65%;
+    width: 32%;
+    h2, h3{
+      text-align: left;
+    }
+  }
+  @include respond-to("m"){
+    top: 15%;
+    left: 5%;
+  }
+  @include respond-to("l"){
+    top: 20%;
+    left: 5%;
+  }
+  @include respond-to("xl"){
+    width: 28%;
+  }
+
 }
 
 .donateBtn {
@@ -20,20 +52,43 @@
   font-family: 'ConcertOne', sans-serif;
   border-radius: 2.5px;
   border: 0.9px solid var(--background);
-  width: 160px;
-  padding: 9px;
+  width: 170px;
+  padding: 7px;
   background: transparent;
   color: var(--background);
   position: absolute;
-  top: 60%;
-  left: 5%;
+  top: 70%;
+  left: 27%;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+
+  @include respond-to("s"){
+    top: 68%;
+    left: 65%;
+    width: 160px;
+    padding: 9px;
+  }
+  @include respond-to("m"){
+    top: 55%;
+    left: 5%;
+  }
+  @include respond-to("l"){
+    top: 50%;
+  }
+  @include respond-to("xl"){
+    width: 190px;
+    font-size: 22px;
+  }
 }
 
 .donateBtn:hover {
   background-color: var(--hover-color);
+  color: var(--secondary-text);
   opacity: 0.5;
   transition: 0.5s ease-in-out;
   border: 0.9px solid rgb(155, 155, 155);
+}
+
+.imgContainer{
+  opacity: 70%;
 }

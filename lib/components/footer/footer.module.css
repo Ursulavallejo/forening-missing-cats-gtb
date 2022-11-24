@@ -1,17 +1,37 @@
 .footer {
+  max-width: 1600px;
   margin: auto;
   height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 30px;
+  padding: 2% 5%;
+  background: var(--secondary-text);
+}
+@media (min-width: 767px) {
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 45px;
+  }
+}
+@media (min-width: 1639px) {
+  .footer {
+    max-width: 1900px;
+  }
 }
 
 .copyrightLogo {
-  color: darkslateblue;
-  font-size: 12px;
+  color: var(--hover-color);
+  font-size: 16px;
   cursor: pointer;
+}
+
+.copyrightLogo:hover {
+  color: var(--background);
+  transition: all 0.4s ease-in;
 }
 
 .logosWrapper {
@@ -20,10 +40,46 @@
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 767px) {
+  .logosWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .logosWrapper {
+    margin-right: 2%;
+  }
+}
+@media (min-width: 1639px) {
+  .logosWrapper {
+    margin-left: 2%;
+  }
+}
 
 .logoCatsWrapper {
   width: 270px;
   margin-left: 3%;
+}
+@media (min-width: 767px) {
+  .logoCatsWrapper {
+    width: 200px;
+    margin-left: 0.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .logoCatsWrapper {
+    width: 270px;
+    margin-left: 3%;
+  }
+}
+@media (min-width: 1639px) {
+  .logoCatsWrapper {
+    width: 300px;
+    margin-left: 0;
+  }
 }
 
 .logo {
@@ -43,9 +99,34 @@
   margin: 0px 0px 30px 0px;
   font-size: 18px;
   line-height: 32px;
+  color: var(--background);
 }
 .copyright p {
   font-size: 16px;
+  color: var(--background);
+}
+@media (min-width: 767px) {
+  .copyright {
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
+    margin-right: 40px;
+  }
+  .copyright h4 {
+    margin: 0px 0px 30px 0px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .copyright p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 767px) and (min-width: 1024px) {
+  .copyright h4 {
+    font-size: 25px;
+  }
 }
 
 .contacts {
@@ -56,17 +137,60 @@
   justify-content: flex-start;
   align-items: flex-end;
   text-align: right;
-  color: var(--primary-text);
+  cursor: pointer;
+}
+.contacts h3, .contacts p {
+  color: var(--background);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contacts h3:hover {
+  color: var(--hover-color);
+  transition: all 0.4s ease-in;
 }
 .contacts p {
   font-family: "AbrilFatface", sans-serif;
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 16px;
   text-align: right;
   width: 100%;
 }
 .contacts a {
   all: unset;
+}
+@media (min-width: 767px) {
+  .contacts {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .contacts h3 {
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 40px;
+    line-height: 50px;
+    width: 100%;
+    margin-top: -12px;
+  }
+  .contacts p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: right;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .contacts h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1639px) {
+  .contacts {
+    margin-right: 3em;
+  }
 }
 
 /*# sourceMappingURL=footer.module.css.map */

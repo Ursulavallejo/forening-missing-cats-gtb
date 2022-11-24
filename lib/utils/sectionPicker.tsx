@@ -11,7 +11,7 @@ const sectionsMap = new Map<string, Function>([
   ["GoalSection", (id: string) => <GoalSection key={id} id={id} />],
   ["LostCatSection", (id: string) => <LostCatSection key={id} id={id} />],
   ["HomelessSection", (id: string) => <HomelessSection key={id} id={id} />],
- // ["HowToHelpSection", (id: string) => <HowToHelpSection key={id} id={id} />],
+  ["HowToHelpSection", (id: string) => <HowToHelpSection key={id} id={id} />],
  // ["CanHelpYouSection", (id: string) => <CanHelpYouSection key={id} id={id} />],
  // ["EmergencySection", (id: string) => <EmergencySection key={id} id={id} />],
  // ["ContactSection", (id: string) => <ContactSection key={id} id={id} />],
