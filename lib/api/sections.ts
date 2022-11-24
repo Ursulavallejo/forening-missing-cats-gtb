@@ -19,6 +19,7 @@ export const getLostCatSectionQuery = (id: string): DocumentNode => {
                 name
                 title
                 description
+                text
                 showInNavigation
                 itemsCollection{
                     items{

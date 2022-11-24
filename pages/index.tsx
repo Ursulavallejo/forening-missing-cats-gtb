@@ -61,10 +61,10 @@ const Home = ({ data }: Props) => {
                       <ParallaxBanner
                        className={styles.imageHeroMobile}
                          layers={[
-                           { image: image?.url ?? "", speed: -4 },
-                           { children: renderBox(true), speed: -55  },
+                           { image: image?.url ?? "", speed: 2 },
+                           { children: renderBox(true), speed: -65  },
                          ]}
-                         style={{ height: "35vh" }}
+                         style={{ height: "430px" }}
 
                        ></ParallaxBanner>
              </div>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BsInstagram, BsFacebook } from 'react-icons/bs';
+import { MdOutlineLanguage } from 'react-icons/md';
 
 
 
@@ -74,6 +75,19 @@ const Navbar = () => {
                 </a>
         </li>
 
+       <li>
+
+       <Link
+                href={router.asPath}
+                locale={router.locale == 'sv' ? 'en' : 'sv'} >
+
+
+               <h4> {router.locale == 'sv' ? 'English' : 'Svenska'}</h4>
+
+
+
+        </Link>
+       </li>
       </ul>
     </section>
 

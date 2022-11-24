@@ -13,14 +13,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 1rem;
   }
   @include respond-to("m") {
     align-items: flex-start;
-    padding: 80px 40px;
+    padding: 0 0 0 2.5rem;
   }
-
+  @include respond-to("l") {
+    align-items: flex-start;
+    padding: 0  2rem;
+  }
   @include respond-to("xl") {
-    padding: 95px 40px;
+    padding: 45px 40px;
   }
 
 
@@ -45,7 +49,7 @@
     }
     @include respond-to("xl") {
       max-width: 1900px;
-      margin:0 3.7rem 0 2.5rem ;
+      margin:0 3rem  ;
     }
 
   }
@@ -63,27 +67,30 @@
     margin-left: 0;
 
   }
-  p {
+  h3{
+    text-align: center;
+  }
+  h3, p {
     padding-bottom: 1.5em;
-    padding-right: 1rem;
-    text-align: left;
-
+    padding-right: 2.5rem;
   }
   @include respond-to("s") {
     margin: 0 1.5em;
 
   }
   @include respond-to("m") {
-    text-align: left;
+    h2, h3{
+      text-align: left;
+    }
     width: 80%;
     margin: 0 ;
   }
   @include respond-to("l") {
-    width: 75%;
+    width: 42%;
   }
 
   @include respond-to("xl") {
-    width: 50%;
+    width: 65%;
   }
 }
 
@@ -108,28 +115,30 @@
   }
 
   @include respond-to("m"){
-    width: Max(270px, 85%);
-    height: Max(270px, 85%);
+    width: Max(260px, 65%);
+    height: Max(260px, 85%);
     gap: 5px;
     margin-bottom: 2rem;
+    margin-left: -0.5rem;
 
   }
   @include respond-to("l"){
-    width: Max(245px, 60%);
-    height: Max(260px, 85%);
+    width: Max(230px, 60%);
+    height: Max(230px, 85%);
   }
   @include respond-to("xl"){
-    width: Max(260px, 85%);
-    height: Max(260px, 85%);
+    width: Max(280px, 85%);
+    height: Max(280px, 85%);
   }
 
 }
 
 //look again not working scroll
 .itemContainer:hover{
+  opacity: 0.5;
   color: var(--secondary-text);
-  transition: all 0.4s ease-in;
-  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  //cursor: pointer;
 }
 
 
@@ -152,6 +161,9 @@
     width: Max(250px, 80%);
     height: Max(250px, 80%);
   }
+  @include respond-to("m") {
+    width: Max(210px, 45%);
+  }
 
   @include respond-to("l") {
     width: Max(210px, 50%);
@@ -159,7 +171,7 @@
 
   @include respond-to("xl") {
     padding-bottom: 3em;
-    width: Max(250px, 50%);
+    width: Max(250px, 60%);
   }
 }
 
@@ -199,13 +211,14 @@
     grid-auto-rows: 1fr 1fr 1fr;
     margin-bottom: 2.5rem;
     column-gap: 0.5em;
-    max-width: 850px;
+    max-width: 650px;
     margin-left: auto;
 
 
   }
   @include respond-to("l") {
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 750px;
 
 
   }

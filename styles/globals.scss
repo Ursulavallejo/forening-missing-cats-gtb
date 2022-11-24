@@ -83,9 +83,14 @@ p {
 
 // Subtitles Sections Title
    h3 {
-     font-size: clamp(16px, 2.5vw, 50px);
+     font-size: clamp(16px, 2.5vw, 30px);
      color: var(--secondary-text);
    }
+
+h4 {
+  font-size: 15px;
+  font-family: "Poppins";
+}
 
 
 

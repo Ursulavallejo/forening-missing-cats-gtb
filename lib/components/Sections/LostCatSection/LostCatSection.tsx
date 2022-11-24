@@ -51,7 +51,8 @@ export const LostCatSection = ({ id }: Props) => {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <h2>{data.lostCatSection.title}</h2>
-          <p>{data.lostCatSection.description}</p>
+          <h3>{data.lostCatSection.description}</h3>
+          <p>{data.lostCatSection.text}</p>
         </div>
 
          <div className={styles.gridContainer}>

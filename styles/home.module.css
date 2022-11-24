@@ -20,7 +20,7 @@
   visibility: hidden;
   display: none;
 }
-@media (min-width: 767px) {
+@media (min-width: 1024px) {
   .container .imageHeroDesktop {
     visibility: visible;
     width: 100%;
@@ -32,8 +32,9 @@
   margin: 0;
   visibility: visible;
   opacity: 95%;
+  width: 100%;
 }
-@media (min-width: 767px) {
+@media (min-width: 1024px) {
   .container .containerHeroMobile {
     visibility: hidden;
     display: none;
@@ -50,10 +51,10 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  bottom: 54%;
+  bottom: 49%;
   align-items: center;
   justify-content: center;
-  margin-left: 12%;
+  margin-left: 11%;
   margin-right: auto;
   letter-spacing: 1px;
   z-index: 1;
@@ -61,20 +62,20 @@
 }
 @media (min-width: 767px) {
   .container .textHero {
-    bottom: 38%;
+    bottom: 52%;
     margin-left: 10%;
     padding: 1rem 0.5rem;
   }
 }
 @media (min-width: 1024px) {
   .container .textHero {
-    bottom: 47%;
+    bottom: 46%;
     margin-left: 23%;
   }
 }
 @media (min-width: 1336px) {
   .container .textHero {
-    bottom: 35%;
+    bottom: 42%;
     margin-left: 23%;
   }
 }

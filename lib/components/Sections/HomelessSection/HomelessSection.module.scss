@@ -1,0 +1,39 @@
+@import "../../../../styles/breakpoints.scss";
+
+.container{
+  position: relative;
+}
+.textContainer{
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  margin-bottom: 10px;
+  width: 25%;
+  word-spacing: 0.2px;
+  h2,p {
+    color: white;
+  }
+}
+
+.donateBtn {
+  font-size: 18px;
+  font-family: 'ConcertOne', sans-serif;
+  border-radius: 2.5px;
+  border: 0.9px solid var(--background);
+  width: 160px;
+  padding: 9px;
+  background: transparent;
+  color: var(--background);
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.donateBtn:hover {
+  background-color: var(--hover-color);
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+  border: 0.9px solid rgb(155, 155, 155);
+}

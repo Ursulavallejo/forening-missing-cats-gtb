@@ -39,7 +39,7 @@
    visibility: hidden;
     display: none;
 
-    @include respond-to("s"){
+    @include respond-to("m"){
       visibility: visible;
       width: 100%;
       opacity: 95%;
@@ -51,8 +51,9 @@
     margin: 0;
     visibility: visible;
     opacity: 95%;
+    width: 100%;
 
-    @include respond-to("s"){
+    @include respond-to("m"){
 
       visibility: hidden;
       display: none;
@@ -74,25 +75,25 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    bottom: 54%;
+    bottom: 49%;
     align-items: center;
     justify-content: center;
-    margin-left: 12%;
+    margin-left: 11%;
     margin-right: auto;
     letter-spacing: 1px;
     z-index: 1 ;
     padding: 0.5rem 0.2rem  ;
     @include respond-to("s"){
-      bottom: 38%;
+      bottom: 52%;
       margin-left: 10%;
       padding: 1rem 0.5rem;
     }
     @include respond-to("m"){
-      bottom: 47%;
+      bottom: 46%;
       margin-left: 23%;
     }
     @include respond-to("l"){
-      bottom: 35%;
+      bottom: 42%;
       margin-left: 23%;
     }
     @include respond-to("xl"){
