@@ -1,3 +1,266 @@
+.wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem 4rem;
+  position: relative;
+  max-width: 1600px;
+  background: var(--background-color);
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1639px) {
+  .wrapper {
+    max-width: 2000px;
+  }
+}
 
+.left {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: transparent;
+  z-index: 2;
+}
+@media (min-width: 1024px) {
+  .left {
+    width: 30%;
+    margin: 0 20px;
+  }
+}
+@media (min-width: 1336px) {
+  .left {
+    width: 35%;
+    margin: 5px -1%;
+  }
+}
+@media (min-width: 1639px) {
+  .left {
+    width: 40%;
+    margin: 5px 20px;
+  }
+}
+
+.logo {
+  width: 720px;
+  height: 865px;
+  position: absolute;
+  top: 7%;
+  left: -4%;
+  background: url("../../../../styles/assets/images/catEmergency.jpg");
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 74%;
+  z-index: 1;
+  opacity: 0.5;
+  overflow: hidden;
+  padding: 0;
+  z-index: -100;
+}
+@media (min-width: 1336px) {
+  .logo {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    background-position: 80%;
+    background-repeat: no-repeat;
+    background-size: 88%;
+    z-index: 1;
+    opacity: 100%;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1639px) {
+  .logo {
+    background-position: 60%;
+    background-size: 85%;
+  }
+}
+
+.header {
+  color: var(--primary-text);
+  font-size: 30px;
+  width: 100%;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+@media (min-width: 767px) {
+  .header {
+    font-size: 42px;
+    width: 100%;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 3.5%;
+    z-index: 3;
+    width: 30%;
+    margin-top: 10%;
+  }
+}
+@media (min-width: 1336px) {
+  .header {
+    width: 30%;
+    font-size: 50px;
+  }
+}
+@media (min-width: 1639px) {
+  .header {
+    margin-left: 0.3em;
+    left: 5%;
+  }
+}
+
+.right {
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  padding: 0 0.5em;
+}
+.right a {
+  all: unset;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.right a:hover {
+  color: var(--secondary-text);
+}
+@media (min-width: 767px) {
+  .right {
+    width: 95%;
+  }
+}
+@media (min-width: 1024px) {
+  .right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 9em;
+    margin-right: -100px;
+  }
+}
+@media (min-width: 1336px) {
+  .right {
+    width: 50%;
+    margin-right: -4%;
+  }
+}
+
+.introText {
+  max-width: 650px;
+}
+.introText h1 {
+  font-size: 23px;
+  text-align: left;
+  line-height: 38px;
+  margin-bottom: 25px;
+}
+@media (min-width: 767px) {
+  .introText h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+.introText p {
+  font-size: 19px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  .introText p {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  cursor: pointer;
+  padding-left: 12px;
+}
+.question p {
+  width: 90%;
+  font-size: 23px;
+  text-align: left;
+  margin-bottom: 25px;
+  color: var(--primary-text);
+  padding-top: 0px;
+}
+@media (min-width: 767px) {
+  .question {
+    width: 100%;
+    font-size: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .question p {
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1336px) {
+  .question p {
+    width: 80%;
+    padding-bottom: 1rem;
+  }
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: rotate 0.4s ease-out;
+  margin-right: 12px;
+}
+@media (min-width: 767px) {
+  .dot {
+    margin-top: 0px;
+  }
+}
+.dot.rotate {
+  rotate: 180deg;
+}
+
+.answer {
+  padding-left: 1em;
+  padding-bottom: 1rem;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.hidden {
+  display: none;
+}
 
 /*# sourceMappingURL=EmergencySection.module.css.map */

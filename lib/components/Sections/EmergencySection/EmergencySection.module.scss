@@ -1,0 +1,285 @@
+@import "../../../../styles/breakpoints.scss";
+
+.wrapper {
+  box-sizing: border-box;
+  margin:0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem 4rem ;
+  position: relative;
+  max-width: 1600px;
+  background: var(--background-color);
+
+
+  @include respond-to("s") {
+    //background: transparent;
+    //padding: 6.7em 0.5em;
+  }
+
+
+  @include respond-to("m") {
+    flex-direction: row;
+    align-items: flex-start;
+    //margin: 40px 0px;
+  }
+
+  @include respond-to("l") {
+    //margin: 40px 0;
+
+  }
+
+  @include respond-to("xl") {
+    //margin: 60px auto;
+    max-width: 2000px;
+  }
+
+}
+
+.left {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: transparent;
+  z-index: 2;
+
+
+  @include respond-to("m") {
+    width: 30%;
+    margin: 0 20px;
+  }
+  @include respond-to("l") {
+    width: 35%;
+   margin: 5px -1%;
+  }
+  @include respond-to("xl") {
+    width: 40%;
+   margin: 5px 20px;
+  }
+
+}
+
+.logo {
+
+  width:720px;
+  height: 865px;
+  position: absolute;
+  top: 7%;
+  left: -4%;
+  background: url('../../../../styles/assets/images/catEmergency.jpg');
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 74%;
+  z-index: 1;
+  opacity: 0.5;
+  overflow: hidden;
+  padding: 0;
+  z-index: -100;
+
+  @include respond-to("l") {
+    width:50%;
+    //width:720px;
+    //height: 855px;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    background-position:80%;
+    background-repeat: no-repeat;
+    background-size: 88%;
+    z-index: 1;
+    opacity: 100%;
+    overflow: hidden;
+  }
+
+  @include respond-to("xl") {
+    background-position:60%;
+    background-size: 85%;
+   // width:760px;
+    //height: 865px;
+  }
+
+}
+
+.header {
+  //font-family: "Poppins-bold";
+  color: var(--primary-text);
+  font-size: 30px;
+  width: 100%;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+
+  @include respond-to("s") {
+    font-size: 42px;
+    width:100%;
+    text-align: left;
+
+  }
+
+  @include respond-to("m") {
+    position: absolute;
+    top: 0;
+    left: 3.5%;
+    z-index: 3;
+    width: 30%;
+    margin-top: 10%;
+  }
+
+  @include respond-to("l") {
+    width: 30%;
+    font-size: 50px;
+  }
+  @include respond-to("xl") {
+    margin-left: 0.3em;
+    left: 5%;
+  }
+
+}
+
+.right {
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  padding: 0 0.5em;
+
+  a {
+    all: unset;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  a:hover{
+    color: var(--secondary-text);
+  }
+
+  @include respond-to("s"){
+    width: 95%;
+  }
+  @include respond-to("m") {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 9em;
+    margin-right: -100px;
+  }
+  @include respond-to("l") {
+    width: 50%;
+    margin-right: -4%;
+
+  }
+
+
+}
+
+.introText {
+  max-width: 650px;
+
+  h1 {
+    font-size: 23px;
+    //font-family: "Poppins-Bold";
+    text-align: left;
+    line-height: 38px;
+    margin-bottom: 25px;
+
+    @include respond-to("s") {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    //font-family: "Poppins";
+   // width: 370px;
+    font-size: 19px;
+    margin-bottom: 50px;
+    width: 100%;
+
+    @include respond-to("s") {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  cursor: pointer;
+  padding-left: 12px;
+
+  p {
+    width: 90%;
+    font-size: 23px;
+    //font-family: "Poppins-bold";
+    text-align: left;
+    margin-bottom: 25px;
+    color: var(--primary-text);
+    padding-top: 0px;
+  }
+
+  @include respond-to("s") {
+    width: 100%;
+    font-size: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    p {
+      width: 90%;
+      padding-bottom: 1rem;
+    }
+  }
+  @include respond-to("l"){
+    p {
+      width:80%;
+      padding-bottom: 1rem;
+    }
+
+  }
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: rotate 0.4s ease-out;
+  margin-right: 12px;
+
+
+  @include respond-to("s") {
+    margin-top: 0px;
+  }
+
+  &.rotate {
+  rotate: 180deg;
+  }
+}
+.answer {
+  padding-left: 1em;
+  padding-bottom: 1rem;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.hidden {
+  display: none;
+}

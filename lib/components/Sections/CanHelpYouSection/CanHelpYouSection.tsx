@@ -6,6 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from "next/image";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { INLINES, BLOCKS } from "@contentful/rich-text-types";
+import { GiPawHeart } from "react-icons/gi";
 import Link from "next/link";
 
 type Props = {
@@ -20,15 +21,15 @@ export const CanHelpYouSection = ({ id }: Props) => {
       locale: locale,
     },
   });
-  console.log('CanHelpYouSection', data)
+  //console.log('CanHelpYouSection', data)
 
   if (loading) return <div></div>;
 
   const renderUlItem = (item: any, index: number) => {
     return (
       <div className={styles.ulWrapper} key={index}>
-        <div className={styles.symbol}>
-          <MdOutlineKeyboardArrowRight />{" "}
+        <div className={styles.dot}>
+          <GiPawHeart size='30px' />{" "}
         </div>
         <div>{item?.content[0]?.content[0]?.value}</div>
       </div>
@@ -44,27 +45,29 @@ export const CanHelpYouSection = ({ id }: Props) => {
   };
 
   return (
-    <div className={styles.container} id="info">
+    <div className={styles.container} >
       <div className={styles.wrapper}>
-        <div className={styles.left}>
-          <Image
-            className={styles.img}
-            src={data.canHelpYouSection.image.url}
-            width={500}
-            height={500}
-            alt="WomanCat"
-            loading="eager"
-            quality={75}
-            objectFit="cover"
-          />
-        </div>
-        <div className={styles.right}>
+
+       <div className={styles.left}>
           {data.canHelpYouSection?.text?.json &&
             documentToReactComponents(
               data.canHelpYouSection.text.json,
               options
             )}
         </div>
+
+         <div className={styles.right}>
+                  <Image
+                    className={styles.img}
+                    src={data.canHelpYouSection.image.url}
+                    width={500}
+                    height={500}
+                    alt="WomanCat"
+                    loading="eager"
+                    quality={75}
+                    objectFit="cover"
+                  />
+                </div>
       </div>
     </div>
   );

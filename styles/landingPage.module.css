@@ -1,3 +1,21 @@
+.container {
+  padding-top: 75px;
+  background: black;
+}
 
+.insideStyles {
+  background: transparent;
+  padding: 50px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.2rem;
+  word-spacing: 1rem;
+}
+
+.image {
+  height: 95vh;
+}
 
 /*# sourceMappingURL=landingPage.module.css.map */

@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { useState } from "react";
 import Image from 'next/image'
-//import logo from '../../../../styles/assets/images/bg-faq.png'
+import logo from '../../../../styles/assets/images/catEmergency.jpg'
 
 type Props = {
   id: string;
@@ -38,7 +38,7 @@ export const EmergencySection = ({ id }: Props) => {
           <p>{item.question}</p>
 
           <div
-            className={`${styles.greendot} ${
+            className={`${styles.dot} ${
               openFaqs.includes(index) ? "" : styles.rotate
             }`}
           >
@@ -63,29 +63,28 @@ export const EmergencySection = ({ id }: Props) => {
   const { header, introText, image } = data.emergencySection;
 
   return (
-    <section className={styles.wrapper} id="FAQ">
-
-
+    <section className={styles.wrapper} >
 
       <div className={styles.left}>
-        <div className={styles.image}>
+{/*         <div className={styles.image}>
           <Image
             className={styles.img}
             src={image.url}
             width={500}
             height={500}
-            alt="WomanCat"
+            alt="CatEmergency"
             loading="eager"
             quality={75}
             objectFit="cover"
           />
 
-        </div>
+        </div> */}
+        <div className={styles.logo}></div>
         <div className={styles.header}>
         <h2>{header}</h2>
         </div>
       </div>
-      <div className={styles.right}>
+      <div className={styles.right} >
         <div className={styles.introText}>
           {introText?.json && documentToReactComponents(introText.json)}
         </div>

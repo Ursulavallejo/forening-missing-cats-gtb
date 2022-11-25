@@ -8,6 +8,7 @@ import { getSection } from "../lib/utils/sectionPicker";
 import Image from "next/image";
 import { useEffect } from 'react';
 import { useQuery } from "@apollo/client";
+import { Parallax,  Background } from 'react-parallax';
 
 type Props = {
   data: LandingPageModel;
@@ -17,38 +18,39 @@ const LandingPageInfo =  ({ data }: Props) => {
   const { header, introText, heroImage, seoMetadata } = data;
 
    return (
-      <>
 
-            <div className={styles.container}>
-
-              <div className={styles.textWrapper}>
-              <h1 className={styles.header}>{header}</h1>
-
-              <div className={styles.imageWrapper}>
-                <Image
-                 src={heroImage.url}
-                 alt="HeroPhoto"
-                 width="2700"
-                 height="2700"
-                 objectFit="contain"
-                 loading="eager"
-                 quality={100}
-                 priority
-                 className={styles.image}
-                 />
-                </div>
-                <p className={styles.text}>{introText}</p>
-
-              </div>
-
-            </div>
-
+    <div className={styles.container} >
+    <Parallax
+      bgImage={heroImage.url}
+      strength={75}
+      renderLayer={(percentage) => (
+        <div>
+          <div
+            style={{
+              position: "absolute",
+              background: `rgba(10, 10, 10, ${percentage * 20})`,
+              opacity:"50%",
+              left: "50%",
+              top: "85%",
+              borderRadius: "20%",
+              transform: "translate(-50%,-50%)",
+              width: percentage * 550,
+              height: percentage * 100,
+            }}
+          />
+        </div>
+      )}
+    >
+      <div className={styles.image} >
+        <div className={styles.insideStyles}><h1 className={styles.heroText}>{header}</h1></div>
+      </div>
+    </Parallax>
             {/* RENDER SECTIONS */}
             {data.sectionsCollection.items.map((section: any) =>
              getSection(section.__typename, section.sys?.id)
              )}
+      </div>
 
-      </>
   )
  };
 
