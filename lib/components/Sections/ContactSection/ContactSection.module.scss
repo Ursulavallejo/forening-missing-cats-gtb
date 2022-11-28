@@ -1,0 +1,164 @@
+@import "../../../../styles/breakpoints.scss";
+
+
+.container {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  @include respond-to("s"){
+    width: 100%;
+    padding: 20px 100px;
+  }
+
+}
+
+.headerText {
+ font-family: "Corinthia-Bold", sans-serif;
+  letter-spacing: 0.8px;
+  word-spacing: 2px;
+  margin-bottom: 3rem;
+  color: var(--primary-text);
+  padding-top: 4rem;
+}
+
+.wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactBox{
+  width: 90%;
+  max-width: 860px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+.image{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5.5%;
+  opacity:0.3;
+  @include respond-to("s"){
+      width: 55%;
+      display: block;
+      object-fit: cover;
+      max-width:100%;
+      height: auto;
+      opacity: 80%;
+      position: relative;
+      margin-right: 1.5rem;
+  }
+}
+
+
+.styleContact{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  word-spacing: 0.2px;
+  line-height: 1.6em;
+  padding-bottom: 25px;
+  text-align: center;
+  @include respond-to("s"){
+    text-align: left;
+  }
+
+}
+.contactUs{
+  padding: 10px 20px ;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+ .errorStyle{
+    padding-bottom: 8px;
+  }
+  @include respond-to("s"){
+    padding: 40px 80px 0 30px;
+  }
+}
+
+.field{
+  width: 290px;
+  padding: 0.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  outline: none;
+  background-color: white;
+  margin-bottom: 22px;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  z-index: 99;
+  position: relative;
+
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.area{
+  margin-top: 15px;
+  min-height: 150px;
+  border: none;
+  border-radius: 5px;
+  width: 290px;
+  color: var(--date-color);
+  z-index:99;
+  @include respond-to("s"){
+    width: 250px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    z-index: 99;
+  }
+}
+
+.buttonStyle{
+  padding: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.3s;
+  width: 290px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  z-index:99;
+}
+
+.buttonStyle:hover{
+  background-color:rgba(0, 0, 0, 0.1);
+}
+
+.fieldArea{
+  margin-top: 15px;
+  margin-bottom: 22px;
+  min-height: 150px;
+  width: 290px;
+  border: none;
+  border-radius: 5px;
+  color: var(--date-color);
+  z-index:99;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: white;
+  transition: 0.3s;
+  position: relative;
+}
+
+

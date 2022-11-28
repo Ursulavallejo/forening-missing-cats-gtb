@@ -14,7 +14,7 @@ const sectionsMap = new Map<string, Function>([
   ["HowToHelpSection", (id: string) => <HowToHelpSection key={id} id={id} />],
   ["CanHelpYouSection", (id: string) => <CanHelpYouSection key={id} id={id} />],
   ["EmergencySection", (id: string) => <EmergencySection key={id} id={id} />],
- // ["ContactSection", (id: string) => <ContactSection key={id} id={id} />],
+  ["ContactSection", (id: string) => <ContactSection key={id} id={id} />],
 
 
 ]);

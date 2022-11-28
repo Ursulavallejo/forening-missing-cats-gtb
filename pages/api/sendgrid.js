@@ -4,13 +4,14 @@ async function sendEmail(req, res) {
   try {
     sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
     await sendgrid.send({
-      to: "fredrik.ostlind@getitnordic.se",
-      from: "gethub-eoi@gethub.se",
-      subject: `GetHub EOI from salesite`,
-      html: `<h1>EOI från Gethub.se</h1>
-              <p><strong>Namn:</strong> ${req.body.fullName}</p>
-              <p><strong>Företag:</strong> ${req.body.company}</p>
+      to: "missing.cats.gtb@gmail.com",
+      from: "missing.cats.gtb@gmail.com",
+      subject: `Contact Form from MissingCats Web`,
+      html: `<h1>Contact from WebPage</h1>
+              <p><strong>Name:</strong> ${req.body.fullName}</p>
+              <p><strong>Phone:</strong> ${req.body.phone}</p>
               <p><strong>Email:</strong> ${req.body.email}</p>
+              <p><strong>Message:</strong> ${req.body.message}</p>
 `,
     });
   } catch (error) {

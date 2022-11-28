@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from "next/image";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { INLINES, BLOCKS } from "@contentful/rich-text-types";
-import { GiPawHeart } from "react-icons/gi";
+import { IoPaw } from "react-icons/io5";
 import Link from "next/link";
 
 type Props = {
@@ -29,7 +29,7 @@ export const CanHelpYouSection = ({ id }: Props) => {
     return (
       <div className={styles.ulWrapper} key={index}>
         <div className={styles.dot}>
-          <GiPawHeart size='30px' />{" "}
+          <IoPaw size='30px' />{" "}
         </div>
         <div>{item?.content[0]?.content[0]?.value}</div>
       </div>

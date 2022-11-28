@@ -71,10 +71,10 @@
   top: 7%;
   left: -4%;
   background: url('../../../../styles/assets/images/catEmergency.jpg');
-  background-position: 0%;
+  background-position: 0;
   background-repeat: no-repeat;
   background-size: 74%;
-  z-index: 1;
+  //z-index: 1;
   opacity: 0.5;
   overflow: hidden;
   padding: 0;
@@ -226,7 +226,7 @@
     text-align: left;
     margin-bottom: 25px;
     color: var(--primary-text);
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   @include respond-to("s") {
@@ -265,7 +265,7 @@
 
 
   @include respond-to("s") {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   &.rotate {

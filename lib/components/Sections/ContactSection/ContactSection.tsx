@@ -18,9 +18,11 @@ export const ContactSection = ({ id }: Props) => {
     },
   });
 
+console.log('Contact', data)
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   //   Form validation state
 
@@ -50,6 +52,10 @@ export const ContactSection = ({ id }: Props) => {
       tempErrors["phone"] = true;
       isValid = false;
     }
+    if (message.length <= 0) {
+       tempErrors["message"] = true;
+       isValid = false;
+    }
 
     setErrors({ ...tempErrors });
     return isValid;
@@ -68,6 +74,7 @@ export const ContactSection = ({ id }: Props) => {
           email: email,
           fullName: fullName,
           phone: phone,
+          message: message,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -88,17 +95,19 @@ export const ContactSection = ({ id }: Props) => {
       // Reset form fields
       setFullName("");
       setEmail("");
-      setCompany("");
+      setPhone("");
+      setMessage("");
     }
   };
 
   return (
     <>
       <section className={styles.container} id="contact">
+       <div>
+       <h1 className={styles.headerText}>{data.contactSection.title}</h1>
+        </div>
+        <div className={styles.contactBox}>
         <div className={styles.wrapper}>
-          <div className={styles.headerContainer}>
-            <h1>{data.contactSection.title}</h1>
-          </div>
 
         <div className={styles.image}>
           <Image
@@ -106,7 +115,7 @@ export const ContactSection = ({ id }: Props) => {
             src={data.contactSection.image.url}
             width={500}
             height={500}
-            alt="redPhoneCat"
+            alt="mailCat"
             loading="eager"
             quality={75}
             objectFit="cover"
@@ -128,12 +137,9 @@ export const ContactSection = ({ id }: Props) => {
                 className={styles.field}
                 placeholder={data.contactSection.namePlaceholder}
               />
-              {errors?.fullName && <p>Name cannot be empty.</p>}
+              {errors?.fullName && <p className={styles.errorStyle}>Name cannot be empty.</p>}
             </div>
             <div className={styles.formGroup}>
-              <p className={styles.styleContact}>
-                {data.contactSection.companyText}
-              </p>
               <input
                 id="phone-field"
                 type="text"
@@ -144,12 +150,12 @@ export const ContactSection = ({ id }: Props) => {
                 className={styles.field}
                 placeholder={data.contactSection.phonePlaceholder}
               />
-              {errors?.phone && <p>Phone cannot be empty.</p>}
+              {errors?.phone && <p className={styles.errorStyle}>Phone cannot be empty.</p>}
             </div>
             <div className={styles.formGroup}>
-              <p className={styles.styleContact}>
+{/*               <p className={styles.styleContact}>
                 {data.contactSection.emailText}{" "}
-              </p>
+              </p> */}
               <input
                 id="email-field"
                 type="email"
@@ -160,13 +166,27 @@ export const ContactSection = ({ id }: Props) => {
                 className={styles.field}
                 placeholder={data.contactSection.emailPlaceholder}
               />
-              {errors?.email && <p>Email cannot be empty.</p>}
+              {errors?.email && <p className={styles.errorStyle}>Email cannot be empty.</p>}
             </div>
 
+           {/*  text area */}
+           <div className={styles.formGroup}>
+           <textarea
+       /*     className={`${styles.field}${styles.area}`} */
+           className={styles.fieldArea}
+           name="message"
+           value={message}
+            onChange={(e) => {
+                         setMessage(e.target.value);
+                       }}
+            placeholder={data.contactSection.messageBox}
+           />
+            {errors?.message && <p className={styles.errorStyle}>Message cannot be empty.</p>}
+           </div>
             <button type="submit" className={styles.buttonStyle}>
               {data.contactSection.buttonText}
             </button>
-            <div>
+            <div className={styles.errorStyle}>
               {showSuccessMessage && (
                 <p className={styles.colorGreen}>Thank you! Your Message has been delivered.</p>
               )}
@@ -176,6 +196,7 @@ export const ContactSection = ({ id }: Props) => {
               )}
             </div>
           </form>
+          </div>
         </div>
       </section>
     </>
