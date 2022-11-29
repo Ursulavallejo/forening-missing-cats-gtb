@@ -43,10 +43,16 @@
     top: 20%;
     left: 5%;
   }
+  .textContainer h2, .textContainer h3 {
+    padding-bottom: 1rem;
+  }
 }
 @media (min-width: 1639px) {
   .textContainer {
     width: 28%;
+  }
+  .textContainer h2, .textContainer h3 {
+    padding-bottom: 2rem;
   }
 }
 
@@ -81,13 +87,14 @@
 }
 @media (min-width: 1336px) {
   .donateBtn {
-    top: 50%;
+    top: 53%;
   }
 }
 @media (min-width: 1639px) {
   .donateBtn {
     width: 190px;
     font-size: 22px;
+    top: 47%;
   }
 }
 
@@ -101,6 +108,58 @@
 
 .imgContainer {
   opacity: 70%;
+}
+
+.qrWrapper {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 140%;
+  position: absolute;
+  z-index: 100;
+  background-color: black;
+  padding: 25px;
+}
+@media (min-width: 767px) {
+  .qrWrapper {
+    width: 40vw;
+    height: 40vh;
+    padding: 35px;
+    margin-top: -1px;
+  }
+}
+@media (min-width: 1024px) {
+  .qrWrapper {
+    width: 40vw;
+    height: 50vh;
+    top: 20%;
+    left: 65%;
+    margin-left: -200px;
+  }
+}
+@media (min-width: 1336px) {
+  .qrWrapper {
+    width: 20vw;
+    height: 32vh;
+    margin-left: -100px;
+    padding: 15px;
+  }
+}
+@media (min-width: 1639px) {
+  .qrWrapper {
+    margin-left: -180px;
+    width: 20vw;
+    height: 35vh;
+  }
+}
+
+.closeQr {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=HomelessSection.module.css.map */

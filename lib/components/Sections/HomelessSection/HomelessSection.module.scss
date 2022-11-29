@@ -40,9 +40,15 @@
   @include respond-to("l"){
     top: 20%;
     left: 5%;
+    h2, h3{
+      padding-bottom:1rem;
+    }
   }
   @include respond-to("xl"){
     width: 28%;
+    h2, h3{
+      padding-bottom:2rem;
+    }
   }
 
 }
@@ -73,11 +79,12 @@
     left: 5%;
   }
   @include respond-to("l"){
-    top: 50%;
+    top: 53%;
   }
   @include respond-to("xl"){
     width: 190px;
     font-size: 22px;
+    top: 47%;
   }
 }
 
@@ -92,3 +99,57 @@
 .imgContainer{
   opacity: 70%;
 }
+
+//Qr
+
+
+.qrWrapper {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 140%;
+  position: absolute;
+  z-index: 100;
+  background-color: black;
+  padding: 25px;
+
+  @include respond-to("s"){
+    width: 40vw;
+    height: 40vh;
+    padding: 35px;
+    margin-top: -1px;
+  }
+  @include respond-to("m"){
+    width: 40vw;
+    height: 50vh;
+    top: 20%;
+    left: 65%;
+    margin-left: -200px;
+  }
+  @include respond-to("l"){
+    width: 20vw;
+    height: 32vh;
+    margin-left: -100px;
+    padding: 15px;
+
+  }
+  @include respond-to("xl"){
+    margin-left: -180px;
+    width: 20vw;
+    height: 35vh;
+
+  }
+
+}
+
+
+.closeQr {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+

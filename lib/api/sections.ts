@@ -41,6 +41,7 @@ export const getHomelessSectionQuery = (id: string): DocumentNode => {
                 richText{json}
                 image{url}
                 buttonText
+                qr{url}
                 showInNavigation
             }
         }
