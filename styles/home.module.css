@@ -67,6 +67,13 @@
     padding: 1rem 0.5rem;
   }
 }
+@media (min-width: 844px) {
+  .container .textHero {
+    bottom: 35%;
+    margin-left: 10%;
+    padding: 1rem 0.5rem;
+  }
+}
 @media (min-width: 1024px) {
   .container .textHero {
     bottom: 46%;

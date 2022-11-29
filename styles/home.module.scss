@@ -73,6 +73,11 @@
       margin-left: 10%;
       padding: 1rem 0.5rem;
     }
+    @include respond-to("sm"){
+      bottom: 35%;
+      margin-left: 10%;
+      padding: 1rem 0.5rem;
+    }
     @include respond-to("m"){
       bottom: 46%;
       margin-left: 23%;
