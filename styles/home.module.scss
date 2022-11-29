@@ -20,20 +20,6 @@
     width: 100vw;
     position: relative;
 
-    @include respond-to("s"){
-      //margin-top: 16%;
-    }
-    @include respond-to("m"){
-      //margin-top: 5.9%;
-    }
-
-    @include respond-to("l"){
-     // margin-top: 6.4%;
-    }
-    @include respond-to("xl"){
-      //margin-top: 3.9%;
-    }
-
   }
   .imageHeroDesktop {
    visibility: hidden;
@@ -65,7 +51,6 @@
   letter-spacing: 0.2rem;
   word-spacing: 1rem;
   color: var(--background);
-  //text-shadow: 1px 1px var(--secondary-color);
 
 }
 

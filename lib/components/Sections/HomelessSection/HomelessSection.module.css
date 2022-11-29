@@ -60,14 +60,14 @@
   background: transparent;
   color: var(--background);
   position: absolute;
-  top: 70%;
+  top: 74%;
   left: 27%;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
 @media (min-width: 767px) {
   .donateBtn {
-    top: 68%;
+    top: 71%;
     left: 65%;
     width: 160px;
     padding: 9px;

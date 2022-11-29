@@ -40,6 +40,9 @@
   align-items: center;
   box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 50px;
+  @include respond-to("s"){
+    width: 100%;
+  }
 }
 
 .image{
@@ -56,7 +59,7 @@
       height: auto;
       opacity: 80%;
       position: relative;
-      margin-right: 1.5rem;
+      margin-right: 2.5rem;
   }
 }
 
@@ -123,6 +126,9 @@
     margin-top: 0px;
     margin-bottom: 15px;
     z-index: 99;
+  }
+  @include respond-to("m"){
+
   }
 }
 

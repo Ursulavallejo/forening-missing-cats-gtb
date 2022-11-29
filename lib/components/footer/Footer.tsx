@@ -32,7 +32,7 @@ const Footer = () => {
             className={styles.logo}
             src={logoCats.url}
             width={500}
-            height={670}
+            height={500}
             alt="logoCats"
             loading="eager"
             quality={70}
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div  className={styles.copyright}>
+      <div  className={styles.textFooter}>
         {documentToReactComponents(footerText.json)}
       </div>
       <div className={styles.contacts}>
@@ -59,7 +59,7 @@ const Footer = () => {
        rel={"noreferrer"}
        className={styles.copyrightLink}>
          <span className={styles.copyrightLogo} >
-         <AiFillCopyrightCircle size={30}  />Created by Ursula Vallejo Janne</span>
+         <AiFillCopyrightCircle size={30}  /><h4>Created by Ursula Vallejo Janne</h4></span>
          </a>
       </div>
     </div>
