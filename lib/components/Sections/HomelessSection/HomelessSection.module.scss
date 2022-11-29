@@ -110,7 +110,7 @@
   height: 140%;
   position: absolute;
   z-index: 100;
-  background-color: transparent;
+  background-color: black;
   padding: 25px;
 
   @include respond-to("s"){
@@ -118,6 +118,7 @@
     height: 40vh;
     padding: 35px;
     margin-top: -1px;
+    background-color: transparent;
   }
   @include respond-to("m"){
     width: 35vw;

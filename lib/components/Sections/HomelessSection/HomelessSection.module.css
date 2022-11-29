@@ -117,7 +117,7 @@
   height: 140%;
   position: absolute;
   z-index: 100;
-  background-color: transparent;
+  background-color: black;
   padding: 25px;
 }
 @media (min-width: 767px) {
@@ -126,6 +126,7 @@
     height: 40vh;
     padding: 35px;
     margin-top: -1px;
+    background-color: transparent;
   }
 }
 @media (min-width: 1024px) {
