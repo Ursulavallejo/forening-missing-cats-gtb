@@ -133,13 +133,15 @@
 }
 
 .buttonStyle{
+  background-color: #f46b45;
   padding: 6px;
-  font-size: 15px;
+  font-size: 16px;
+  font-palette: dark;
   cursor: pointer;
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: white;
+  //background-color: white;
   transition: 0.3s;
   width: 290px;
   margin-top: 10px;
@@ -154,7 +156,7 @@
 .fieldArea{
   margin-top: 15px;
   margin-bottom: 22px;
-  min-height: 150px;
+  min-height: 100px;
   width: 290px;
   border: none;
   border-radius: 5px;
