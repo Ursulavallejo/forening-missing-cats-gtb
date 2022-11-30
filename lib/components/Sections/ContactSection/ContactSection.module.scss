@@ -86,7 +86,8 @@
   align-items: center;
   height: 100%;
  .errorStyle{
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    width: 250px;
   }
   @include respond-to("s"){
     padding: 40px 80px 0 30px;
@@ -133,7 +134,7 @@
 }
 
 .buttonStyle{
-  background-color: #f46b45;
+  background-color:var(--primary-color) ;
   padding: 6px;
   font-size: 16px;
   font-palette: dark;
@@ -167,6 +168,15 @@
   background-color: white;
   transition: 0.3s;
   position: relative;
+}
+
+.colorGreen{
+  color: #7aec7a;
+  padding-bottom: 25px;
+}
+.colorError{
+  color: #9a0505;
+  padding-bottom: 25px;
 }
 
 
