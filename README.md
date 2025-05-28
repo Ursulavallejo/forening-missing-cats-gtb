@@ -11,22 +11,6 @@ The main idea behind using Contentful was to allow the organization to easily up
 The work was done voluntarily and without compensation, as a way to support their cause and contribute to their outreach efforts.
 
 ---
-
-## General View
-
-<img src="./styles/assets/images/Missing-Cats-Göteborg.png" alt="Demo Screenshot" width="400"/>
-
-<video width="600" controls>
-  <source src="./assets/video/MissingCatsGoteborg.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
-
----
-
-### [Demo Project-Netlify ](https://missing-cats-goteborg.netlify.app/)
-
----
-
 ### 🛠️ Technologies Used
 
 - **Contentful** Contentful
@@ -34,6 +18,22 @@ The work was done voluntarily and without compensation, as a way to support thei
 - **JavaScript**
 - **Typescript**
 - **Sass**
+
+---
+## General View
+
+<img src="./styles/assets/images/Missing-Cats-Göteborg.png" alt="Demo Screenshot" width="400"/>
+
+---
+https://github.com/user-attachments/assets/63ea0fe2-15fb-4b2a-9f50-028a02085f0a
+
+
+---
+
+### [Demo Project-Netlify ](https://missing-cats-goteborg.netlify.app/)
+
+---
+
 
 ### 🚀 How to Run the Project Locally :
 
